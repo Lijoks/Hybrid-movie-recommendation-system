@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Recommendations</title>
+</head>
+<body>
+    <h1>Movie Recommendations</h1>
+    <ul>
+        {% if recommendations %}
+            {% for movie in recommendations %}
+                <li>{{ movie }}</li>
+            {% endfor %}
+        {% else %}
+            <li>No recommendations found.</li>
+        {% endif %}
+    </ul>
+    <form action="/" method="get">
+        <input type="submit" value="Get More Recommendations">
+    </form>
+</body>
+</html>
+
